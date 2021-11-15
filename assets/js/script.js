@@ -14,21 +14,35 @@ currentDate.textContent = today.format("MMM Do, YYYY");
 //I need to specify the current hour. I can use the today var to do this
 //I need to create a target var for the timeblocks
 
-var currentHour = document.querySelectorAll(".hour");
+var theTimeBox = document.querySelectorAll(".container")
+var currentHour = document.querySelectorAll("h3");
 var calendarPlans = document.querySelectorAll("#plans");
 
-function setHour() {
- for (var i = 0; i < currentHour.length; i++) {
-  console.log(currentHour[i].textContent)
-}
-return result
-}
 
-
-if (setHour !== today.format("ha")) {
+for (var i = 0; i < theTimeBox.length; i++) {
+  if (currentHour !== today.format("ha")) {
     for (var i = 0; i < calendarPlans.length; i++)
     calendarPlans[i].setAttribute("class", "past col-12 col-xl-8");
-} else
+}}
 
-console.log(setHour())
-console.log(today.format("ha"))
+console.log($('.container').children(0).textContent)
+
+//this is going absolutely nowhere, moving on
+
+//save the text in the textArea to local storage
+var saveButton = document.querySelector(".saveBtn")
+var savedPlans = localStorage.getItem("Plans")
+
+calendarPlans.textContent = savedPlans
+
+
+
+saveButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    ``
+    
+
+
+}
+
+)
