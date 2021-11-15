@@ -14,12 +14,21 @@ currentDate.textContent = today.format("MMM Do, YYYY");
 //I need to specify the current hour. I can use the today var to do this
 //I need to create a target var for the timeblocks
 
-var currentHour = document.querySelector(".hour");
+var currentHour = document.querySelectorAll(".hour");
 var calendarPlans = document.querySelectorAll("#plans");
 
-if (currentHour.textContent !== today.format("ha")) {
-    for (var i = 0; i < calendarPlans.length; i++)
-    calendarPlans[i].setAttribute("class", "past col-12 col-xl-8");
+function setHour() {
+ for (var i = 0; i < currentHour.length; i++) {
+  console.log(currentHour[i].textContent)
+}
+return result
 }
 
-console.log(currentHour.textContent)
+
+if (setHour !== today.format("ha")) {
+    for (var i = 0; i < calendarPlans.length; i++)
+    calendarPlans[i].setAttribute("class", "past col-12 col-xl-8");
+} else
+
+console.log(setHour())
+console.log(today.format("ha"))
